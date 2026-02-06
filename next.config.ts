@@ -16,9 +16,9 @@ const withPWA = withPWAInit({
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    outputFileTracingRoot: path.join(__dirname, "./"),
-  }
+  outputFileTracingRoot: path.join(__dirname, "./"),
+  // Adding empty turbopack config to silence the error as suggested by Next.js
+  turbopack: {},
 };
 
 // Fix for Next.js 16 defaults
