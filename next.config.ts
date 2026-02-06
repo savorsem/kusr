@@ -15,15 +15,7 @@ const withPWA = withPWAInit({
 
 const nextConfig: NextConfig = {
   /* config options here */
-  outputFileTracingRoot: path.join(__dirname, "./"),
-  // Adding empty turbopack config to silence the error as suggested by Next.js
-  turbopack: {},
+  // turbopack: {},
 };
 
-// Fix for Next.js 16 defaults
-const finalConfig = {
-  ...nextConfig,
-  // This explicitly allows Turbopack to work with the PWA plugin
-}
-
-export default withPWA(finalConfig);
+export default nextConfig;
